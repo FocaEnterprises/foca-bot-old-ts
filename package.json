@@ -1,0 +1,27 @@
+{
+  "name": "discord.js-typescript",
+  "version": "1.0.0",
+  "main": "Index.js",
+  "repository": "https://github.com/miguel5g/discord.js-typescript.git",
+  "author": "Miguel Ângelo <miguelcg958@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./build/Bot.js",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/Bot.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
+}
