@@ -87,13 +87,29 @@ export interface BotConfig {
    */
   version: string;
   /**
-   * Uma prefix padrão
-   */
-  defaultPrefix: string;
-  /**
    * Token do Bot
    */
   token: string | undefined;
+
+  /**
+   * Opções relacionadas ao comportamento
+   */
+  behavior: {
+    /**
+    * Uma prefix padrão
+    */
+    defaultPrefix: string;
+
+    /**
+     * Canal onde serão enviadas as mensagens de boas vindas
+     */
+    welcomeChannelId: string;
+
+    /**
+     * Canal das regras
+     */
+    rulesChannelId: string;
+  }
 
   /**
    * Opções de desenvolvimento

@@ -15,13 +15,13 @@ const event: BotEvent = {
     if (msg.channel.type === 'dm') return;
 
     // Verificar se inicia com a prefix padrão
-    if (!msg.content.startsWith(Bot.config.defaultPrefix)) return;
+    if (!msg.content.startsWith(Bot.config.behavior.defaultPrefix)) return;
 
     // Separar o nome do comando executado e argumentos passados
     const cmd = msg.content
       .trim()
       .split(' ')[0]
-      .slice(Bot.config.defaultPrefix.length)
+      .slice(Bot.config.behavior.defaultPrefix.length)
       .trim();
     const args = msg.content
       .trim()
