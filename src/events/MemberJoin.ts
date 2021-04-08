@@ -7,12 +7,12 @@ const event: BotEvent = {
   caller: 'guildMemberAdd',
   enable: true,
   run: async (Bot, member: GuildMember) => {
-    const guild = member.guild;
+    const { guild } = member;
     const channel = guild.channels.cache.get(Bot.config.behavior.welcomeChannelId);
 
-    if(!channel) {
-      console.log('The welcome channel does not exists!')
-      return
+    if (!channel) {
+      console.log('The welcome channel does not exists!');
+      return;
     }
 
     const embed = new MessageEmbed()
