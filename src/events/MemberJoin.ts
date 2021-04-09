@@ -23,7 +23,9 @@ const event: BotEvent = {
       .setDescription(`Olá, <@${member.user.id}>, seja muito bem-vindo a ${guild.name}!\n\nPor favor, leia as <#${Bot.config.behavior.rulesChannelId}>\n`)
       .setFooter(guild.name, guild.iconURL() || '');
 
-    await channel.send({ embed });
+    const content = `||<@${member.user.id}>||`;
+
+    await channel.send({ content, embed });
   },
 };
 
