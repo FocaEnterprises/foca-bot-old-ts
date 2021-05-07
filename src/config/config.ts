@@ -8,7 +8,8 @@ const config: BotConfig = {
   behavior: {
     defaultPrefix: '!',
     welcomeChannelId: '753035853458309121',
-    rulesChannelId: '745352992706003005'
+    rulesChannelId: '745352992706003005',
+    mutedRoleId: '779130363142078485'
   },
 
   devlopment: {

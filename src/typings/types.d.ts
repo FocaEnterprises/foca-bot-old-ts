@@ -109,6 +109,11 @@ export interface BotConfig {
      * Canal das regras
      */
     rulesChannelId: string;
+
+    /**
+     * Cargo de silenciado
+     */
+    mutedRoleId: string;
   }
 
   /**

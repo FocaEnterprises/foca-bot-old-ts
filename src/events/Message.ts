@@ -12,6 +12,13 @@ const event: BotEvent = {
 
     if (msg.channel.type === 'dm') return;
 
+    const mentionRegex = RegExp(`^<@!${Bot.user.id}>$`);
+
+    if(msg.content.match(mentionRegex)){
+            msg.channel.send(`Meu prefixo é \`${Bot.config.behavior.defaultPrefix}\``);
+            return;
+        }
+
     if (!msg.content.startsWith(Bot.config.behavior.defaultPrefix)) return;
 
     const cmd = msg.content
